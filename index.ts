@@ -7,9 +7,11 @@ app.on("ready", () => {
         title: "Blazecast",
         minWidth: 600,
         minHeight: 500,
-        titleBarStyle: 'hidden',
-        transparent: true,
-        frame: false
+        titleBarStyle: 'hidden-inset',
+        frame: false,
+        webPreferences: {
+            experimentalFeatures: true
+        }
     });
 
     mainWindow.loadURL('file://' + __dirname + '/index.html');
