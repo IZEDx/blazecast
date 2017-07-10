@@ -9,12 +9,12 @@
     "removeComments": false,
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
     "lib": [
       "dom",
       "es5",
       "es2015.promise"
-    ]
+    ],
+    "jsx": "react"
   },
   "exclude": [
     "node_modules"

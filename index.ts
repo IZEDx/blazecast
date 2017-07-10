@@ -14,7 +14,7 @@ app.on("ready", () => {
         }
     });
 
-    mainWindow.loadURL('file://' + __dirname + '/index.html');
+    mainWindow.loadURL('file://' + __dirname + '/app/index.html');
 
     mainWindow.once('ready-to-show', mainWindow.show);
 

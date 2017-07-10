@@ -1,6 +1,9 @@
 {
   "globalDependencies": {
-    "node": "registry:dt/node#7.0.0+20170322231424",
-    "vue": "registry:dt/vue#1.0.21+20160929090511"
+    "node": "registry:dt/node#7.0.0+20170322231424"
+  },
+  "dependencies": {
+    "react": "registry:dt/react#15.0.0+20170324160437",
+    "react-dom": "registry:dt/react-dom#0.14.0+20170207010524"
   }
 }
