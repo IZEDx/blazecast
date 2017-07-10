@@ -1,0 +1,101 @@
+
+$fg: #e0e2e4
+$font: Montserrat, bold
+$signature-font: Ranga, cursive
+$app-min-width: 500px
+$app-max-width: 1150px
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Ranga')
+
+=box-sizing($sizing)
+  -webkit-box-sizing: $sizing
+  -moz-box-sizing: $sizing
+  box-sizing: $sizing
+
+=box-shadow($shadow...)
+  -webkit-box-shadow: $shadow
+  -moz-box-shadow: $shadow
+  box-shadow: $shadow
+
+=no-border()
+  border-radius: 0
+  border-width: 0px
+  border: none
+  outline: none
+  border: none !important
+  -webkit-box-shadow: none !important
+  -moz-box-shadow: none !important
+  box-shadow: none !important
+
+=no-selection()
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+=transition($transition...)
+  -o-transition: $transition
+  -webkit-transition: $transition
+  -moz-transition: $transition
+  transition: $transition
+
+=transform($transform...)
+  -ms-transform: $transform
+  -webkit-transform: $transform
+  -moz-transform: $transform
+  -o-transform: $transform
+  transform: $transform
+
+=text-outline($amount, $color)
+  text-shadow: 0 0 $amount $color
+
+=background-gradient($direction, $color1, $size1, $color2, $size2)
+  background: $color1
+  background: -webkit-linear-gradient($direction, $color1 $size1, $color2 $size2)
+  background: -o-linear-gradient($direction, $color1 $size1, $color2 $size2)
+  background: -moz-linear-gradient($direction, $color1 $size1, $color2 $size2)
+  background: linear-gradient($direction, $color1 $size1, $color2 $size2)
+
+body
+  font-family: $font
+  overflow: hidden
+  color: $fg
+  margin: 0
+  padding: 0
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+
+.scrollbar::-webkit-scrollbar
+  background-color: transparent
+  width: 15px
+
+.scrollbar::-webkit-scrollbar-corner,
+.scrollbar::-webkit-scrollbar-resizer
+  background-color: transparent
+
+.scrollbar::-webkit-scrollbar-thumb
+  background-color: rgba(100, 150, 150, 0.2)
+
+.scrollbar::-webkit-scrollbar-thumb:hover,
+.scrollbar::-webkit-scrollbar-thumb:active
+  background-color: rgba(100, 150, 150, 0.5)
+
+
+
+.fadeable
+  transition: opacity 0.2s
+  &.faded-out
+    opacity: 0
+
+.app-container
+  +background-gradient(to bottom, #AD2332, 150px, #232323, 150px)
+  width: 100vw
+  height: 100vh
+  transition: padding 0.4s
+  padding: 75px 100px
+  +box-sizing(border-box)
